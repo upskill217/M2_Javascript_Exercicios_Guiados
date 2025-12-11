@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Prática Aula 2</title>
+    <style>
+        :root { --primary: #059669; --bg: #f0fdf4; --text: #064e3b; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); padding: 40px; max-width: 900px; margin: 0 auto; }
+        h1 { color: var(--primary); border-bottom: 3px solid var(--primary); padding-bottom: 10px; }
+        .section-title { margin-top: 40px; background: #d1fae5; padding: 10px 20px; border-radius: 6px; font-weight: bold; color: #065f46; border-left: 5px solid var(--primary); }
+        .task { background: white; padding: 15px 20px; border-radius: 8px; margin-bottom: 10px; border: 1px solid #a7f3d0; display: flex; gap: 15px; align-items: start; }
+        .task:hover { border-color: var(--primary); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .task-num { background: var(--primary); color: white; width: 25px; height: 25px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; flex-shrink: 0; }
+        code { background: #f3f4f6; color: #d63384; padding: 2px 5px; border-radius: 4px; font-family: monospace; border: 1px solid #e5e7eb; }
+        .checkbox { margin-top: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h1>Ficha Prática: HTML Gym (30 Exercícios)</h1>
+    <p><strong>Instruções:</strong> Cria um ficheiro <code>index.html</code> e resolve estas tarefas sequencialmente.</p>
+
+    <!-- NÍVEL 1: O AQUECIMENTO -->
+    <div class="section-title">Nível 1: Texto e Títulos (Básico)</div>
+
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">1</div><div>Gera a estrutura HTML5 base (<code>!</code> + Tab).</div></div>
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">2</div><div>Define o idioma para português (<code>lang="pt"</code>).</div></div>
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">3</div><div>Cria um <code>h1</code> com o texto "Diário de Bordo".</div></div>
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">4</div><div>Cria um <code>p</code> com o texto "Hoje aprendi HTML.".</div></div>
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">5</div><div>Cria um <code>h2</code> com o texto "Conceitos".</div></div>
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">6</div><div>Cria um parágrafo onde a palavra <strong>Semântica</strong> esteja a negrito (<code>strong</code>).</div></div>
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">7</div><div>No mesmo parágrafo, coloca a palavra <em>Significado</em> em itálico (<code>em</code>).</div></div>
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">8</div><div>Insere uma linha horizontal (<code>hr</code>) para separar secções.</div></div>
+
+    <!-- NÍVEL 2: LISTAS E LINKS -->
+    <div class="section-title">Nível 2: Listas e Navegação</div>
+
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">9</div><div>Cria um subtítulo <code>h3</code> "Links Úteis".</div></div>
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">10</div><div>Cria uma <strong>Lista Não Ordenada</strong> (<code>ul</code>).</div></div>
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">11</div><div>Dentro da lista, adiciona 3 itens (<code>li</code>): Google, YouTube, MDN.</div></div>
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">12</div><div>Transforma o texto "Google" num link para <code>https://google.com</code>.</div></div>
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">13</div><div>Faz com que o link do Google abra numa nova aba (<code>target="_blank"</code>).</div></div>
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">14</div><div>Cria uma <strong>Lista Ordenada</strong> (<code>ol</code>) com o título "Meus passos".</div></div>
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">15</div><div>Adiciona 2 passos: "Abrir VS Code", "Escrever Código".</div></div>
+
+    <!-- NÍVEL 3: MULTIMÉDIA -->
+    <div class="section-title">Nível 3: Imagens e Caminhos</div>
+
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">16</div><div>Adiciona uma imagem (<code>img</code>) usando este link: <code>https://placehold.co/200</code>.</div></div>
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">17</div><div>Adiciona o atributo <code>alt</code> com o texto "Placeholder cinza".</div></div>
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">18</div><div>Tenta adicionar um atributo <code>title</code> à imagem com "Dica Secreta" e passa o rato por cima dela no browser.</div></div>
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">19</div><div>Cria uma pasta chamada <code>imagens</code> no teu projeto.</div></div>
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">20</div><div>(Teórico) Se tivesses uma foto lá dentro, o caminho seria <code>src="imagens/foto.jpg"</code>? (Sim/Não)</div></div>
+
+    <!-- NÍVEL 4: SEMÂNTICA (O IMPORTANTE) -->
+    <div class="section-title">Nível 4: Estrutura Semântica</div>
+
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">21</div><div>Apaga o conteúdo do <code>body</code> (ou cria um novo ficheiro <code>semantica.html</code>). Vamos começar de novo com estrutura.</div></div>
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">22</div><div>Cria um <code>header</code>. Dentro dele, coloca um <code>h1</code> "Meu Site Semântico".</div></div>
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">23</div><div>Abaixo do header, cria um <code>nav</code>. Dentro, uma <code>ul</code> com 3 links (Início, Sobre, Contacto).</div></div>
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">24</div><div>Cria um <code>main</code> para o conteúdo principal.</div></div>
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">25</div><div>Dentro do main, cria uma <code>section</code> com o título (h2) "Sobre Mim".</div></div>
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">26</div><div>Ainda dentro do main, cria um <code>article</code> com o título (h2) "Última Notícia" e um parágrafo de texto.</div></div>
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">27</div><div>Fora do main, cria um <code>aside</code>. Coloca lá um título (h3) "Publicidade" e um parágrafo "Compre aqui!".</div></div>
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">28</div><div>No final da página, cria um <code>footer</code>.</div></div>
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">29</div><div>No footer, coloca um parágrafo com "&copy; 2024 [Teu Nome]".</div></div>
+    <div class="task"><input type="checkbox" class="checkbox"><div class="task-num">30</div><div>Valida a tua página: Olha para o código e garante que não tens <code>div</code> onde devias ter tags semânticas!</div></div>
+
+    <div style="text-align: center; margin-top: 40px; color: var(--primary);">
+        <h3><i class="fa-solid fa-check-circle"></i> Fim dos Exercícios!</h3>
+    </div>
+
+</body>
+</html>
