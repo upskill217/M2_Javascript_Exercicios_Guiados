@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulários</title>
+  </head>
+  <body>
+    <!-- Nível 1: Estrutura e HTTP (1-5) -->
+    <form action="#" method="get" target="_blank">
+      <input type="text" />
+      <input type="submit" />
+    </form>
+    <hr />
+
+    <!-- Nível 2: Inputs Clássicos (6-15) -->
+    <form action="#">
+      <input type="text" placeholder="Danilson Sanches" />
+      <br />
+      <br />
+      <input type="password" />
+      <br />
+      <br />
+      Aceito os termos <input type="checkbox" checked />
+      <br />
+      <br />
+      Sim<input type="radio" name="escolha" /> Não
+      <input type="radio" name="escolha" />
+      <br />
+      <br />
+      <input type="reset" value="reset" />
+      <br />
+      <br />
+      <input type="submit" value="Submit" />
+      <br />
+      <br />
+      <button>Enviar</button>
+    </form>
+    <hr />
+
+    <!-- Nível 3: Labels e Organização (16-20) -->
+    <form action="#">
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" />
+      </fieldset>
+    </form>
+    <hr />
+
+    <!-- Nível 4: Inputs Modernos HTML5 (21-30) -->
+    <form action="#">
+      Email <input type="email" />
+      <br />
+      <br />
+      Numero <input type="number" />
+      <br />
+      <br />
+      Telefone <input type="tel" />
+      <br />
+      <br />
+      URL <input type="url" />
+      <br />
+      <br />
+      Data <input type="date" />
+      <br />
+      <br />
+      Cor <input type="color" />
+      <br />
+      <br />
+      Range <input type="range" />
+      <br />
+      <br />
+      Pesquisa <input type="search" />
+      <br />
+      <br />
+      Ficheiros <input type="file" multiple />
+      <br />
+      <br />
+      <input type="submit" />
+    </form>
+    <hr />
+
+    <!-- Nível 5: Dropdowns e Texto Longo (31-35) -->
+    <form action="#">
+      <textarea rows="5"> </textarea>
+      <br />
+      <br />
+      <select>
+        <option>Azul</option>
+        <option>Vermelho</option>
+        <option selected>Verde</option>
+      </select>
+    </form>
+    <hr />
+
+    <!-- Nível 6: Validação Nativa (36-40) -->
+    <form action="#">
+      Nome <input type="text" min="0" max="10" />
+      <br />
+      <br />
+      Password <input type="password" readonly />
+      <br />
+      <br />
+      <input type="submit" disable />
+    </form>
+    <hr />
+
+    <!-- Nível 7: Ligação ao JavaScript (41-50) -->
+    <form id="myForm" onsubmit="validar(event)">
+      Mensagem <input type="text" id="msg" />
+      <br />
+      <br />
+      <input type="submit" />
+    </form>
+
+    <script>
+      function validar(e) {
+        e.preventDefault();
+        //alert("Enviei!");
+
+        let texto = document.getElementById("msg").value;
+
+        if (texto === "") {
+          alert("Erro: Escreve algo!");
+        } else {
+          alert("Escreveste: " + texto);
+          console.log(texto);
+        }
+      }
+    </script>
+  </body>
+</html>

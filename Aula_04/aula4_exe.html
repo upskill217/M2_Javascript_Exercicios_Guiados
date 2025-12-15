@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ginásio HTML: Formulários</title>
+    <style>
+        :root { --primary: #f97316; --bg: #fff7ed; --text: #431407; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); padding: 40px; max-width: 950px; margin: 0 auto; line-height: 1.5; }
+        
+        h1 { color: var(--primary); text-align: center; border-bottom: 3px solid var(--primary); padding-bottom: 15px; }
+        
+        .level { margin-top: 40px; background: white; padding: 20px; border-radius: 8px; border: 1px solid #fed7aa; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .level-title { font-size: 1.2rem; font-weight: bold; color: #c2410c; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        
+        .task { display: flex; gap: 12px; margin-bottom: 8px; align-items: baseline; font-size: 0.95rem; }
+        .num { font-weight: bold; color: var(--primary); min-width: 25px; }
+        
+        code { background: #ffedd5; color: #c2410c; padding: 2px 5px; border-radius: 4px; font-family: monospace; }
+        .checkbox { cursor: pointer; transform: scale(1.2); }
+
+        .js-zone { background: #1e1b4b; color: #fff; padding: 20px; border-radius: 8px; margin-top: 20px; }
+        .js-zone code { background: #312e81; color: #a5f3fc; }
+    </style>
+</head>
+<body>
+
+    <h1><i class="fa-solid fa-dumbbell"></i> 50 Exercícios de Formulários</h1>
+    <p><strong>Instruções:</strong> Cria um ficheiro <code>forms.html</code>. Resolve cada exercício sequencialmente. Testa sempre no browser!</p>
+
+    <!-- NÍVEL 1: HTTP E ESTRUTURA -->
+    <div class="level">
+        <div class="level-title">Nível 1: Estrutura e HTTP (1-5)</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">1</span> Cria a tag <code>&lt;form&gt;</code>.</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">2</span> Adiciona o atributo <code>action="#"</code> (para não enviar a lado nenhum por agora).</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">3</span> Define o atributo <code>method="GET"</code>. Adiciona um input e um botão. Submete e olha para o URL do browser. O que aconteceu?</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">4</span> Muda o método para <code>method="POST"</code>. Submete novamente. Os dados desapareceram do URL? (É assim que enviamos passwords).</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">5</span> Adiciona o atributo <code>target="_blank"</code> ao form. Onde abre a resposta agora?</div>
+    </div>
+
+    <!-- NÍVEL 2: INPUTS CLÁSSICOS -->
+    <div class="level">
+        <div class="level-title">Nível 2: Inputs Clássicos (6-15)</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">6</span> Cria um input de texto simples: <code>type="text"</code>.</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">7</span> Adiciona um <code>placeholder</code> "O teu nome".</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">8</span> Cria um campo de senha: <code>type="password"</code>. Escreve nele.</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">9</span> Cria uma caixa de seleção: <code>type="checkbox"</code> com o texto "Aceito os termos".</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">10</span> Faz com que a checkbox já venha marcada por defeito (<code>checked</code>).</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">11</span> Cria dois <code>type="radio"</code> (Sim/Não).</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">12</span> Dá o mesmo <code>name="escolha"</code> aos dois radios. Tenta selecionar ambos. (Agora só podes escolher um, certo?).</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">13</span> Cria um botão para limpar o formulário: <code>type="reset"</code>.</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">14</span> Cria um botão de envio usando <code>&lt;input type="submit"&gt;</code>.</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">15</span> Cria um botão de envio usando a tag moderna <code>&lt;button&gt;Enviar&lt;/button&gt;</code>.</div>
+    </div>
+
+    <!-- NÍVEL 3: ACESSIBILIDADE -->
+    <div class="level">
+        <div class="level-title">Nível 3: Labels e Organização (16-20)</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">16</span> Cria um <code>label</code> que diga "Nome:".</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">17</span> Dá um <code>id="nome"</code> ao input de texto.</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">18</span> Liga o label ao input usando <code>for="nome"</code>. Clica na palavra "Nome". O cursor saltou para a caixa?</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">19</span> Envolve os inputs num <code>fieldset</code> (caixa de grupo).</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">20</span> Dá um título ao grupo usando <code>legend</code> (ex: "Dados Pessoais").</div>
+    </div>
+
+    <!-- NÍVEL 4: HTML5 MOBILE -->
+    <div class="level">
+        <div class="level-title">Nível 4: Inputs Modernos HTML5 (21-30)</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">21</span> Cria um campo <code>type="email"</code>. Tenta enviar sem o @.</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">22</span> Cria um campo <code>type="number"</code>. Tenta escrever letras.</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">23</span> Cria um campo <code>type="tel"</code> (Abre teclado numérico no telemóvel).</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">24</span> Cria um campo <code>type="url"</code>.</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">25</span> Cria um seletor de data: <code>type="date"</code>.</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">26</span> Cria um seletor de cor: <code>type="color"</code>.</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">27</span> Cria um slider (barra de deslizar): <code>type="range"</code>.</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">28</span> Cria um campo de pesquisa: <code>type="search"</code> (Tem o X para limpar).</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">29</span> Cria um campo para ficheiros: <code>type="file"</code>.</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">30</span> Permite selecionar múltiplos ficheiros com <code>multiple</code>.</div>
+    </div>
+
+    <!-- NÍVEL 5: OUTRAS TAGS -->
+    <div class="level">
+        <div class="level-title">Nível 5: Dropdowns e Texto Longo (31-35)</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">31</span> Cria uma área de texto grande: <code>textarea</code>.</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">32</span> Define que o textarea tem 5 linhas de altura (<code>rows="5"</code>).</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">33</span> Cria um menu dropdown: <code>select</code>.</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">34</span> Adiciona 3 opções (<code>option</code>): Azul, Vermelho, Verde.</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">35</span> Faz com que "Verde" venha selecionado por defeito (<code>selected</code>).</div>
+    </div>
+
+    <!-- NÍVEL 6: VALIDAÇÃO -->
+    <div class="level">
+        <div class="level-title">Nível 6: Validação Nativa (36-40)</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">36</span> Adiciona <code>required</code> ao campo Nome. Tenta enviar vazio.</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">37</span> No campo number, define <code>min="0"</code> e <code>max="10"</code>.</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">38</span> No campo password, define <code>minlength="8"</code>.</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">39</span> Adiciona <code>readonly</code> a um input (O utilizador vê mas não edita).</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">40</span> Adiciona <code>disabled</code> a um botão (Fica cinzento e não clica).</div>
+    </div>
+
+    <!-- NÍVEL 7: JAVASCRIPT -->
+    <div class="level js-zone">
+        <div class="level-title" style="color: #a5f3fc;">Nível 7: Ligação ao JavaScript (41-50)</div>
+        <p style="margin-bottom: 20px; font-size: 0.9rem;">Nota: Adiciona <code>id="meuForm"</code> ao formulário e <code>id="msg"</code> a um input de texto.</p>
+        
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">41</span> Cria uma tag <code>&lt;script&gt;</code> no final do body.</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">42</span> Cria uma função JS vazia: <code>function validar(e) { }</code>.</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">43</span> Liga o form à função: <code>&lt;form onsubmit="validar(event)"&gt;</code>.</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">44</span> Dentro da função, escreve <code>e.preventDefault()</code>. (Isto impede a página de recarregar!).</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">45</span> Adiciona um <code>alert("Enviei!")</code>. Testa o form.</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">46</span> Vamos ler o valor do input. Cria uma variável: <code>let texto = document.getElementById("msg").value</code>.</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">47</span> Muda o alert para mostrar o que escreveste: <code>alert("Escreveste: " + texto)</code>.</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">48</span> (Lógica) Adiciona um <code>if (texto === "")</code> para ver se está vazio.</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">49</span> Se estiver vazio, mostra <code>alert("Erro: Escreve algo!")</code>.</div>
+        <div class="task"><input type="checkbox" class="checkbox"><span class="num">50</span> <strong>Desafio Final:</strong> Usa <code>console.log(texto)</code> em vez de alert e vê o resultado na consola (F12) do browser.</div>
+    </div>
+
+</body>
+</html>
