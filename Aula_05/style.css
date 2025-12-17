@@ -103,7 +103,79 @@ h1,
 }
 
 /* Nível 4: Pseudo-classes e Cores (31-40) */
+.btn-teste:hover {
+  background-color: #000;
+  color: #fff;
+}
 
+.btn-teste:active {
+  background-color: #008000;
+}
 
+.input-teste:focus {
+  border: 1px solid #0000ff;
+  border-color: #0000ff;
+}
+
+body {
+  background-color: rgb(179, 179, 207);
+}
+
+h1 {
+  color: rgba(21, 17, 230, 0.5) !important;
+  color: white;
+}
+
+.btn-teste {
+  color: #ff0000;
+}
+
+.input-teste:focus {
+  outline: none;
+}
+
+.btn-teste {
+  cursor: pointer;
+}
+
+.link-visitado:visited {
+  color: #9d00ff;
+}
+
+.btn-teste {
+  opacity: 0.5;
+}
 
 /* Nível 5: Posição e Layout (41-50) */
+.box-abs {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.box-static {
+  position: relative;
+  top: 20px;
+  z-index: 10;
+}
+
+h1 {
+  position: sticky;
+  top: 0;
+}
+
+.escondido {
+  display: none;
+}
+
+.invisivel {
+  visibility: hidden;
+}
+
+span {
+  display: block;
+}
+
+li {
+  display: inline;
+}
